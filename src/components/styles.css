@@ -1,0 +1,85 @@
+/* Typography and layout */
+h1 {
+  margin: auto auto 1rem;
+  font-size: 3rem;
+  color: #fff;
+}
+
+/* Additional hover effect for the container */
+.hover-effect {
+  transition: transform 0.3s;
+}
+
+.hover-effect:hover {
+  transform: scale(1.05);
+}
+
+/* Card styles */
+.card {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent; /* Initial transparent border */
+}
+
+.card.upper-hover {
+  border-top-width: 2px;
+  border-top-color: rgba(138, 241, 97, 100.1); /* Adjust color and opacity as needed */
+}
+
+.card.lower-hover {
+  border-bottom-width: 2px;
+  border-bottom-color: rgba(138, 241, 97, 100.1); /* Adjust color and opacity as needed */
+}
+
+.card.left-hover {
+  border-left-width: 2px;
+  border-left-color: rgba(138, 241, 97, 100.1); /* Adjust color and opacity as needed */
+}
+
+.card.right-hover {
+  border-right-width: 2px;
+  border-right-color: rgba(138, 241, 97, 100.1); /* Adjust color and opacity as needed */
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Cursor effect */
+.cursor-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover entire parent */
+  height: 100%; /* Cover entire parent */
+  background: radial-gradient(circle at var(--x) var(--y), rgba(138, 241, 97, 0.6) 1%, transparent 12%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, background 0.1s;
+  z-index: 0;
+}
+
+.card:hover .cursor-effect {
+  opacity: 1;
+}
+
+.card img {
+  z-index: 1; /* Ensure the GIF is above the cursor effect */
+}
+
+.bg-custom-color {
+  background-color: #6775CC;
+}
