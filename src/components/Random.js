@@ -36,7 +36,7 @@ const Random = () => {
         setHoveringRight(false);
       }}
     >
-      <h1 className='text-2xl mt-[15px] underline uppercase font-bold text-white'>A Random Gif</h1>
+      <h1 className='text-2xl mt-[15px] underline font-bold text-white playwrite-es'>A Random Gif</h1>
       {loading ? <Spinner /> : <img src={gif} alt='Random Gif' width='450' />}
       <div className="cursor-effect" style={{ '--x': cursorPosition.x, '--y': cursorPosition.y }}></div>
       <button
